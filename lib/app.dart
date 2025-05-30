@@ -5,5 +5,5 @@ import 'loginpage.dart';
 
 void main()
 {
-  runApp(mynewapp());
+  runApp(MyApp());
 }

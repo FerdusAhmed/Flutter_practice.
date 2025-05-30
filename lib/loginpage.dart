@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mypractice_project/home.dart';
 class loging extends StatelessWidget {
+
   const loging({super.key});
 
   @override
@@ -17,10 +19,21 @@ class loging extends StatelessWidget {
       ),
 
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+
 
         child: Center(
+
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+
+              Image.network('https://image.cnbcfm.com/api/v1/image/20836891-facebook_logo_new.jpg?v=1354732729&w=1920&h=1080',
+              width: 200,
+              height: 200,
+             ),
+
+//Image.asset('img.png'),
               SizedBox(
                 height: 10,
               ),
@@ -92,15 +105,28 @@ class loging extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
+
+
                       ElevatedButton(onPressed: (){
                         if(keyform.currentState!.validate())
                           {
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('login succesful')));
                           }
-                      }, child: Text('login',style: TextStyle(
+                        Navigator.push
+
+                          (context,
+                            MaterialPageRoute(builder: (context)=> Thisishome(name: phone.text,)));
+                      },
+
+                          child: Text('login',style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
-                      ),)),
+                      ),
+                      )
+
+                      ),
+
+
                     ],
                   )
 

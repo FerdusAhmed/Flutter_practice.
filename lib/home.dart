@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'loginpage.dart';
 
 class Thisishome extends StatelessWidget {
-  const Thisishome({super.key});
+  final String name;
+  const Thisishome({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +13,14 @@ class Thisishome extends StatelessWidget {
       
 
       appBar: AppBar(
+
+
         title: Text('Home page'),
         centerTitle: true,
         backgroundColor: Colors.red,
       ),
+
+
 
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -22,6 +28,15 @@ class Thisishome extends StatelessWidget {
 
         child: Column(
           children: [
+
+            Text(name,style: TextStyle(
+              color: Colors.red,
+              fontWeight: FontWeight.bold,
+            ),),
+
+           ElevatedButton(onPressed: () {
+              Navigator.pop(context);
+            }, child: Text('back')),
            Text('this is body',style:
            TextStyle(color: Colors.yellowAccent,
              fontWeight: FontWeight.bold,
@@ -94,6 +109,7 @@ padding: EdgeInsets.all(5),
     ],
 
   ),
+
   
   child: Center(
     child: Column(
