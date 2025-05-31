@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class citycard extends StatelessWidget {
+  final String image,city;
   const citycard({
-    super.key,
+    super.key, required this.image, required this.city,
   });
 
   @override
@@ -10,11 +11,23 @@ class citycard extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          Image.network('https://tse3.mm.bing.net/th?id=OIP.216g-WQs1oH6fyKe00KdZgHaEK&pid=Api&P=0&h=220'),
+          Stack(
+
+            children: [Image.network(image),
+              Positioned(
+                  right: 10,
+                  bottom: 10,
+                  child: Container(
+
+                child: Text(city,style: TextStyle(
+                  backgroundColor: Colors.red,
+                ),),
+              ))
+            
+            
+            ],),
           SizedBox(height: 5,),
-          Text('city',style: TextStyle(
-            color: Colors.blue,
-          ),),
+          Text(city),
         ],
       ),
 

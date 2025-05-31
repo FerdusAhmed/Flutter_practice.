@@ -61,39 +61,38 @@ class _mystatefullState extends State<mystatefull> {
                 ),
               ),
 SizedBox(height: 10,),
-Row(
+SingleChildScrollView(
+  scrollDirection: Axis.horizontal,
+  child: Row(
 
-  children: [
-    Center(
+    children: [
+      Center(
 
-      child: citycard(),
-    ),
-    SizedBox(
-      height: 10,
-    ),
-    Center(
+        child: citycard(image: 'https://tse1.mm.bing.net/th?id=OIP.mIc85Z7OdHvpttd-IABQBQHaE7&pid=Api&P=0&h=220', city: 'maldives',),
+      ),
+      SizedBox(
+        width: 10,
+      ),
+      Center(
 
-      child: citycard(),
-    ),
-    SizedBox(
-      height: 10,
-    ),
-    Center(
+        child: citycard(image: 'https://tse4.mm.bing.net/th?id=OIP.C9P3D_qs75jib3Vh0IfrUAHaE8&pid=Api&P=0&h=220',city: '2nd maldives',),
+      ),
+      SizedBox(
+        width: 10,
+      ),
+      Center(
 
-      child: citycard(),
-    ),
-    SizedBox(
-      height: 10,
-    ),
-    Center(
+        child: citycard(image: 'https://tse1.mm.bing.net/th?id=OIP.mIc85Z7OdHvpttd-IABQBQHaE7&pid=Api&P=0&h=220', city: 'maldives3rd'),
+      ),
+      SizedBox(
+        width: 10,
+      ),
 
-      child: citycard(),
-    ),
-    SizedBox(
-      height: 10,
-    ),
-  ],
 
+
+    ],
+
+  ),
 ),
 
 
