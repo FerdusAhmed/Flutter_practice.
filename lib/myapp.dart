@@ -5,6 +5,7 @@ import 'home.dart';
 import 'loginpage.dart';
 import 'statefull.dart';
 import 'todoapp.dart';
+import 'mediaquery.dart';
 
 
 
@@ -20,7 +21,9 @@ class MyApp extends StatelessWidget {
       // home: listview(),
      // home: Gridv(),
      // home: mystatefull(),
-      home: todo(),
+     // home: todo(),
+      home: mediaquery(),
+
 
 
 
