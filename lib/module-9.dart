@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ratio extends StatefulWidget {
   const ratio({super.key});
@@ -22,6 +23,13 @@ class _ratioState extends State<ratio> {
 
 
           children: [
+
+            Container(
+              color: Colors.red,
+              height: 100.h,
+              width: 200.w,
+
+            ),
             
             Container(
               margin: EdgeInsets.all(15),
